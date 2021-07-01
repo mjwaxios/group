@@ -9,6 +9,7 @@ type Group struct {
 	str []string
 }
 
+// String will return the group as a string
 func (g Group) String() (s string) {
 	for i := range g.str {
 		s += g.str[i]
@@ -36,7 +37,7 @@ func (g Group) Randomizer(hashFun func(string) string, pre string) (out Group) {
 	return
 }
 
-// Create a new Group of strings
+// New Creates a new Group of strings
 func New(s []string) Group {
 	return Group{str: s}
 }
